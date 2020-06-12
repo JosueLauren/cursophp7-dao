@@ -23,10 +23,18 @@ require_once("class/usuarios.php");
 //echo json_encode($search);
 
 // carregar um usuario usando o login e a senha
+//$usuario =  new Usuario();
+//$usuario->login("user", "12345");
+//echo $usuario;
 
-$usuario =  new Usuario();
-$usuario->login("user", "12345");
-echo $usuario;
+$aluno = new Usuario();
+
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@alun0");
+
+$aluno->insert();
+
+echo $aluno;
 
 
 
